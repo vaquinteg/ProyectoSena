@@ -1,0 +1,191 @@
+
+body {
+    background: linear-gradient( 45deg, gold, orange);
+    background-repeat: no-repeat;
+   
+}
+
+.nav-link {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;    
+}
+
+.nav-link>ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Nombre_software {
+    padding-top: 200px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    justify-content:center;
+    color: black;
+}
+
+.nav-link:hover {
+    text-decoration:underline;
+    
+}
+
+#navbarDropdown{
+    color: white;
+}
+
+#cerrar_sesion{
+    color: #ffffff;
+}
+
+.bt{
+    font-family: cursive;
+font-size: 21px;
+font-weight: bold;
+border: none; 
+color: black; 
+padding: 11px 15px; 
+cursor: pointer; 
+border-radius: 25px; 
+margin-right: -85px; 
+margin-bottom: -123px;
+}
+
+.primary {background-color: rgb(211, 124, 43); border: 1px solid #110e04;} 
+.primary:hover {background: #da680b; color: rgba(15, 15, 15, 0.342);}
+
+.primary2 {background-color: rgb(235, 175, 13); border: 1px solid #110e04;} 
+.primary2:hover {background: #cccc89; color: rgba(10, 10, 10);}
+
+
+
+label{
+    color: rgb(18, 18, 19);
+    font-family: cursive ;font-size: 19px;
+    font-weight:bold;
+    margin: 18px;
+    }
+
+.ntitulo{
+    color: rgb(35, 35, 39);
+    font-family: cursive ;font-size: 31px;
+    font-weight:bold;
+    margin: 23px;
+    }
+.nnit{
+    color: rgb(23, 23, 24);
+    font-family: cursive ;font-size: 19px;
+    font-weight:bold;
+    margin: 23px;
+    margin-left: 19%;
+    margin-right: 15%;
+        
+}
+
+.es3{
+    background: #d6cece;
+    border-radius: 25px; 
+    height: 31px;
+    width: 213px;
+    padding: 15px;
+    margin-top: 19px;
+    left: 45%;
+    margin-left: 25px;
+    margin-right: 25;
+    
+}
+
+.es4{
+    background: #d6cece;
+    border-radius: 25px; 
+    height: 31px;
+    width: 213px;
+    padding: 15px;
+    margin-top: 35px;
+    left: 45%;
+    margin-left: 25px;
+    margin-right: 25;
+    
+}
+
+#marca{
+    background: #d6cece;
+    border-radius: 8px;  
+    height: 31px;
+    width: 213px;
+    padding: 12px;
+    margin-bottom: 29px;
+}
+
+.imag{
+    width: 100%;
+    margin-left: -4.5%;
+    margin-right: 0%;
+    border-radius: 12%;
+    overflow:hidden;
+}
+.imag:hover{
+    -webkit-transform:scale(0.9);transform:scale(0.9);
+}
+
+.imag2{
+  width: 78%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.imagCot{
+    width: 90%;
+    height: 90%;
+    display: block;
+    margin-left: -4%;
+    margin-right: 0%;
+    filter: contrast(90%);
+
+  }
+
+select{
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: #d6cece;
+    border-radius: 8px;  
+    height: 36px;
+    width: 213px;
+    margin-bottom: 6px;  
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+select.classic {
+background-image:
+    linear-gradient(45deg, transparent 50%, rgba(231, 231, 240, 0.685) 50%),
+    linear-gradient(135deg, rgb(245, 236, 236) 50%, transparent 30%),
+    linear-gradient(to right, rgb(13, 13, 14), rgb(16, 17, 17));
+    margin-top: 19px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+background-position:
+
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+    
+background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+background-repeat: no-repeat;
+}
+
+.formulario{
+    position: absolute;
+    top: 71%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 454px;
+    background:rgb(153, 175, 147);
+    border-radius: 12px;
+}

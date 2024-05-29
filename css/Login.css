@@ -1,0 +1,170 @@
+body {
+    font: 12px/20px 'Lucida Grande', Verdana, sans-serif;
+    color: #404040;
+    background: linear-gradient(to right, black 0%, black 65%, orange 35%, orange 100% )
+    
+  }
+  
+  input, textarea, select, label {
+    font-family: inherit;
+    font-size: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .container {
+   display: flex; 
+   background-color: transparent;
+   justify-content:space-between;
+   
+  }
+
+  .login {
+    /*justify-content: end;
+    margin-left: 57%;*/
+    display: block;
+    padding: 90px 20px;
+    width: 250px;
+    background: #f0f0f1;
+    background-clip: padding-box;
+    border: 1px solid #172b4e;
+    border-bottom-color: #142647;
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.644), inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+    
+    
+  }
+  
+  .login > h1 {
+    
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(12, 7, 7);
+    text-align: center;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
+  }
+  
+  .login-input {
+    display: block;
+    width: 100%;
+    height: 37px;
+    margin-bottom: 20px;
+    padding: 0 9px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px black;
+    background: #ffffff;
+    border: 1px solid #15243b;
+    border-top-color: #0d1827;
+    border-radius: 15px;     
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+  }
+  
+  .login-input:focus {
+    outline: 0;
+    background-color: #ececec;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 4px 1px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 4px 1px rgba(255, 255, 255, 0.6);
+  }
+  
+  .lt-ie9 .login-input { line-height: 35px; }
+  
+  .login-submit {
+    display: block;
+    width: 100%;
+    height: 37px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0e1218;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.3);
+    background: #e08b1c;
+    background-clip: padding-box;
+    border: 1px solid #284473;
+    border-bottom-color: #223b66;
+    border-radius: 15px;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #f18c18, #d48d09);
+    background-image: -moz-linear-gradient(top, #f18c18, #d48d09);
+    background-image: -o-linear-gradient(top, #f18c18, #d48d09);
+    background-image: linear-gradient(to bottom, #f18c18, #d48d09);
+    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 7px rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), inset 0 0 7px rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.15);
+  }
+  
+  .login-submit:active {
+    background: #e69c15;
+    -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4), 0 1px rgba(255, 255, 255, 0.1);
+  }
+   
+  .login-help {
+    text-align: center;
+  }
+  
+  .login-help > a {
+    font-size: 11px;
+    color: #0b0e13;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
+  }
+  
+  .login-help > a:hover {
+    text-decoration: underline;
+  }
+  
+  .anillo1 {
+    z-index: -1;
+    margin-left: 10%;
+    height: 200px;
+    width: 200px; 
+    background-color: black;
+    border-radius: 50%;
+    border-width: 30px;
+    border-style: solid; 
+    border-color: goldenrod
+    
+}
+.burbuja1 {
+    z-index: -1;  
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 70%;
+    
+}
+ 
+.anillo2 {
+  z-index: -1; 
+  height: 200px;
+  width: 200px; 
+  background-color: black;
+  border-radius: 50%;
+  border-width: 30px;
+  border-style: solid; 
+  border-color: Goldenrod;
+  
+}
+.burbuja2 {
+  z-index: -1; 
+  height: 250px;
+  width: 250px; 
+  background-color: white;
+  border-radius: 50%;
+ margin-left: 70%;
+}
+
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  :-moz-placeholder { color: #b8b8b8 !important; }
+  ::-webkit-input-placeholder { color: #b8b8b8; }
+  :-ms-input-placeholder { color: #b8b8b8 !important; }
+  
+
