@@ -71,18 +71,18 @@
       
           <div class="container-fluid row mt-5" >
             <div class="col-lg-6">
-              <form action="#" method="post">
+              <form action="php/create.php" method="post">
               <div class="row">
-                <div class="col-lg-4"> <label class="label" for="Nombre">Nombres y apellidos</label> 
+                <div class="col-lg-4"> <label class="label" for="nombre">Nombres y apellidos</label> 
                 </div>
                 <div class="col-auto">          
-                <input class="campo_texto_nom" type="text" name="Nombre" class="form-control" >
+                <input class="campo_texto_nom" type="text" name="nombre" class="form-control" >
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-4"> <label for="tipo_documento">Tipo de documento</label> </div>
                 <div class="col-auto">
-                    <select class="classic" aria-label="tipo_documento">
+                    <select name="tipo_documento" class="classic" aria-label="tipo_documento">
                         <option selected> Seleccione una opción</option>
                         <option value="1">CC</option>
                         <option value="2">CE</option>
@@ -112,7 +112,7 @@
               <div class="row mt-3">
                 <div class="col-lg-4"> <label for="tipo_sangre">Tipo de sangre</label> </div>
                 <div class="col-auto">
-                    <select class="classic" aria-label="tipo_sangre">
+                    <select name="tipo_sangre" class="classic" aria-label="tipo_sangre">
                         <option selected> Seleccione una opción</option>
                         <option value="1">O+</option>
                         <option value="2">O-</option>
@@ -130,7 +130,7 @@
                 <label for="numero_telefono">Número de teléfono</label> 
                 </div>
                 <div class="col-auto">          
-               <input class="CampoTexto" type="number" name="numero_telefono" class="form-control" >
+               <input class="CampoTexto" type="number" name="numero_telefono_paciente" class="form-control" >
                 </div>
               </div>
               <div class=" row justify-content-center">
