@@ -77,7 +77,7 @@
                 <div class="col-lg-4"> <label class="label" for="nombre">Nombres y apellidos</label> 
                 </div>
                 <div class="col-auto">          
-                <input class="campo_texto_nom" type="text" name="nombre" class="form-control" >
+                <input class="campo_texto_nom" type="text" id="nombre_apellido" name="nombre_apellido" class="form-control" >
                 </div>
               </div>
               <div class="row">
@@ -88,7 +88,7 @@
                         <option value="1">CC</option>
                         <option value="2">CE</option>
                         <option value="3">TI</option>
-                        <option value="4">RC</option>
+                        <option value="4">NUIP</option>
                         <option value="5">Pasaporte</option>
                     </select>
                 </div>
@@ -111,18 +111,24 @@
                 </div>
               </div>
               <div class="row mt-3">
-                <div class="col-lg-4"> <label for="tipo_sangre">Tipo de sangre</label> </div>
+                <div class="col-lg-4"> <label for="RH">RH</label> </div>
                 <div class="col-auto">
-                    <select name="tipo_sangre" class="classic" aria-label="tipo_sangre">
+                    <select name="RH_paciente" class="classic" aria-label="RH_paciente">
                         <option selected> Seleccione una opción</option>
-                        <option value="1">O+</option>
-                        <option value="2">O-</option>
-                        <option value="3">A+</option>
-                        <option value="4">A-</option>
-                        <option value="5">B+</option>
-                        <option value="5">B-</option>
-                        <option value="5">AB+</option>
-                        <option value="5">AB-</option>
+                        <option value="1">+</option>
+                        <option value="2">-</option>
+                    </select>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-lg-4"> <label for="grupo_sanguineo">Grupo sanguineo</label> </div>
+                <div class="col-auto">
+                    <select name="grupo_sanguineo" class="classic" aria-label="grupo_sanguineo">
+                        <option selected> Seleccione una opción</option>
+                        <option value="1">O</option>
+                        <option value="3">A</option>
+                        <option value="5">B</option>
+                        <option value="5">AB</option>                      
                     </select>
                 </div>
               </div>
@@ -131,7 +137,7 @@
                 <label for="numero_telefono">Número de teléfono</label> 
                 </div>
                 <div class="col-auto">          
-               <input class="CampoTexto" type="number" name="numero_telefono_paciente" class="form-control" >
+               <input class="CampoTexto" type="number" name="numero_telefono" class="form-control" >
                 </div>
               </div>
               <div class=" row justify-content-center">
