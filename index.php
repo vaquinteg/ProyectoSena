@@ -22,7 +22,7 @@
                 <input type="text" id="username" name="username" class="login-input" placeholder="Usuario" autofocus>
                 <input type="password" id="password" name="password" class="login-input" placeholder="contraseña">
                 <input  type="submit" value="Ingresar" class="login-submit">
-                <p class="login-help"><a href="Login.html">¿Olvidó su password?</a></p>
+                <p class="login-help"><a href="home.php">¿Olvidó su password?</a></p>
              </form>
             </div>
           </div>
@@ -38,5 +38,3 @@
     
     </body>
 </html>
-
-

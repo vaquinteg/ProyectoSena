@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
-    <title>Home</title>
-</head>
-<body>
-    
-  <nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid bg-dark">
-      <a href="home.html"> <img src="imagen/Logo.png" alt="logo" height="150" class="bg-dark"> </a>
+      <a href="home.php"> <img src="imagen/Logo.png" alt="logo" height="150" class="bg-dark"> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,54 +9,44 @@
           <li class="nav-item dropdown">  
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Almacén</a>
             <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="registrodemonturas.html">Registrar montura</a></li>
+              <li><a class="dropdown-item" href="registrodemonturas.php">Registrar montura</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="acomodar_montura.html">Ubicar montura</a></li>
+              <li><a class="dropdown-item" href="acomodar_montura.php">Ubicar montura</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">  
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Compras</a>
             <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="ordendecompra.html">Generar orden de compra</a></li>
+              <li><a class="dropdown-item" href="ordendecompra.php">Generar orden de compra</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">  
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ventas</a>
             <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="Cotizacion.html">Cotización</a></li>
+              <li><a class="dropdown-item" href="Cotizacion.php">Cotización</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">  
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Información</a>
             <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="nuevamarca.html">Nueva marca</a></li>
+              <li><a class="dropdown-item" href="crear_usuario.php">Nuevo usuario</a></li>
+			  <li><hr class="dropdown-divider"></li>
+			  <li><a class="dropdown-item" href="nuevamarca.php">Nueva marca</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="crear_paciente.html">Nuevo paciente</a></li>
+              <li><a class="dropdown-item" href="crear_paciente.php">Nuevo paciente</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="Nuevoproveedor.html">Nuevo proveedor</a></li>
+              <li><a class="dropdown-item" href="Nuevoproveedor.php">Nuevo proveedor</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="subir_formula.html">Nueva fórmula</a></li>
+              <li><a class="dropdown-item" href="subir_formula.php">Nueva fórmula</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="actualizar_estado_venta.html">Actualizar estado de venta de gafas</a></li>
+              <li><a class="dropdown-item" href="actualizar_estado_venta.php">Actualizar estado de venta de gafas</a></li>
             </ul>
           </li>
             <li class="nav-item">
-              <a class="nav-link" href="Login.html" id="cerrar_sesion">Cerrar sesión</a>
+              <a class="nav-link" href="index.php" id="cerrar_sesion">Cerrar sesión</a>
             </li>
             
         </ul>
       </div>
     </div>
   </nav>
-
-<div class="container-fluid row m-2 justify-content-between">
-    <div class="col-md-6 d-flex justify-content-lg-center"><p class="Nombre_software">SGICANAAN</p>
-    </div>
-    <div class="col-md-6 d-flex justify-content-lg-center"><img src="imagen/chica-gafas.png" alt="foto" width="85%">
-    </div>
-</div>
-
-
-
-</body>
-</html>

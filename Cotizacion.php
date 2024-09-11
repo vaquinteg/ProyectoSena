@@ -10,56 +10,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid bg-dark">
-      <a href="home.html"> <img src="imagen/Logo.png" alt="logo" height="150" class="bg-dark"> </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item dropdown">  
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Almacén</a>
-            <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="registrodemonturas.html">Registrar montura</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="acomodar_montura.html">Ubicar montura</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">  
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Compras</a>
-            <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="ordendecompra.html">Generar orden de compra</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">  
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ventas</a>
-            <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="Cotizacion.html">Cotización</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">  
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Información</a>
-            <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="nuevamarca.html">Nueva marca</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="crear_paciente.html">Nuevo paciente</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="Nuevoproveedor.html">Nuevo proveedor</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="subir_formula.html">Nueva fórmula</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="actualizar_estado_venta.html">Actualizar estado de venta de gafas</a></li>
-            </ul>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Login.html" id="cerrar_sesion">Cerrar sesión</a>
-            </li>
-            
-        </ul>
-      </div>
-    </div>
-  </nav>
+<?php include 'menu.php'; ?>
 
 <div class="container-fluid row m-1">
   <h6 class="ntitulo" style="text-align: center;"> Cotización de lentes</h6>

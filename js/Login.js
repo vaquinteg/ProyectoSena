@@ -1,19 +1,29 @@
 const loginForm = document.getElementById('loginForm');
 const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
+const passwordInput = document.getElementById('password');   
+
 
 loginForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    const username = usernameInput.value.trim();
+    const username = usernameInput.value.trim();   
+
     const password = passwordInput.value.trim();
 
-    // Simulate login validation (replace with your actual validation logic)
-    if (username === 'admin' && password === 'password123') {
-        // Login successful, redirect to home page
-        window.location.href = 'home.html'; // Replace with your actual home page URL
+    // Validación de entrada
+    if (username === '' || password === '') {
+        alert('Por favor, ingrese su nombre de usuario y contraseña.');
+        return;
+    }
+
+    // Validación adicional según tus requisitos (por ejemplo, patrones de contraseña)
+
+    // Simulación de validación de inicio de sesión
+    if (username === 'admin' && password === '123456') {
+        // Inicio de sesión exitoso, redireccionar a la página de inicio
+        window.location.href = 'home.php';
     } else {
-        // Login failed, display error message
-        alert('Su contraseña es invalida');
-    }
+        // Inicio de sesión fallido, mostrar mensaje de error
+        alert('Su contraseña es inválida.');
+    }
 });
