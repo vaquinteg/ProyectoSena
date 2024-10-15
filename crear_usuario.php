@@ -24,27 +24,27 @@
       
           <div class="container-fluid row mt-5" >
             <div class="col-lg-6">
-              <form action="php/registrar_paciente.php" method="post">
+              <form action="php/registrar_usuario.php" method="post">
               <div class="row">
-                <div class="col-lg-4"> <label class="label" for="nombre_apellido">Nombres y apellidos</label> 
+                <div class="col-lg-4"> <label class="label" for="nombre">Nombres y apellidos</label> 
                 </div>
                 <div class="col-auto">          
-                <input class="campo_texto_nom" type="text" id="nombre_apellido" name="nombre_apellido" class="form-control" >
+                <input class="campo_texto_nom" type="text" id="nombre" name="nombre" class="form-control" >
                 </div>
               </div>
               
-              <div class="row">
+              <div class="row mt-1">
                 <div class="col-lg-4">     
-                <label for="numero_documento">Número de documento</label> 
+                <label for="idetificacion">Número de documento</label> 
                 </div>
                 <div class="col-auto">          
-               <input class="CampoTexto" type="number" name="numero_documento" class="form-control" >
+               <input class="CampoTexto" type="number" name="identificacion" class="form-control" >
                 </div>
               </div>
     
               
               <div class="row mt-1">
-                <div class="col-lg-4"> <label for="RH">Rol</label> </div>
+                <div class="col-lg-4"> <label for="rol">Rol</label> </div>
                 <div class="col-auto">
                     <select name="rol" class="classic" aria-label="rol">
                         <option selected> Seleccione un rol</option>
@@ -65,15 +65,7 @@
                 </div>
               </div>
 
-              <div class="row mt-1">
-                <div class="col-lg-4">     
-                <label for="email">Correo</label> 
-                </div>
-                <div class="col-auto">          
-               <input class="CampoTexto" type="email" name="email" class="form-control" >
-                </div>
-              </div>
-                   
+                                 
             </div>
       
             <div class="col-lg-6 mb-2">
@@ -92,17 +84,11 @@
                 </div>
               </div>
 
+              
               <div class="row mt-4">
-                <div class="col-lg-4 pt-1"> <label for="username">Usuario</label></div>
+                <div class="col-lg-4"> <label for="password">Contraseña</label> </div>
                 <div class="col-auto">
-                <input class="CampoTexto" type="text" name="username" class="form-control" >
-                </div>
-              </div>
-
-              <div class="row mt-1">
-                <div class="col-lg-4"> <label for="contraseña">Contraseña</label> </div>
-                <div class="col-auto">
-                <input class="CampoTexto" type="password" name="contraseña" class="form-control" >
+                <input class="CampoTexto" type="password" name="password" class="form-control" >
                 </div>
               </div>
 
@@ -112,6 +98,15 @@
                 </div>
                 <div class="col-auto">          
                <input class="CampoTexto" type="text" name="direccion" class="form-control" >
+                </div>
+              </div>
+
+              <div class="row mt-1">
+                <div class="col-lg-4">     
+                <label for="email">Correo</label> 
+                </div>
+                <div class="col-auto">          
+               <input class="CampoTexto" type="email" name="email" class="form-control" >
                 </div>
               </div>
 
