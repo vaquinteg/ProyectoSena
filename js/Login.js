@@ -19,7 +19,7 @@ loginForm.addEventListener('submit', (event) => {
     // Validación adicional según tus requisitos (por ejemplo, patrones de contraseña)
 
     // Simulación de validación de inicio de sesión
-    if (username === 'admin' && password === '123456') {
+    if (username === 'admin' && password === 'admin') {
         // Inicio de sesión exitoso, redireccionar a la página de inicio
         window.location.href = 'home.php';
     } else {
