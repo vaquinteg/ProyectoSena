@@ -18,7 +18,7 @@
     <div class="col-md-6 d-flex flex-column justify-content-between">
            
             <!-- Formulario login -->
-            <form action="php/registrar_proveedor_marca.php" method="post">
+            <form id="formulario_marca_proveedor" action="php/registrar_proveedor_marca.php" method="post" >
             <div class="row">
                 <div class="col-md-4  d-flex justify-content-between"> <label for="nit">NIT:</label></div>
                 <div class="col-md-4 d-flex justify-content-between">
@@ -79,6 +79,7 @@
 
 
 <script src="js/completar_proveedor.js"></script> 
+<script src="js/resp_validacion_marca_proveedor.js"> </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

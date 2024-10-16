@@ -30,8 +30,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Información</a>
             <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="crear_usuario.php">Nuevo usuario</a></li>
-			  <li><hr class="dropdown-divider"></li>
-			  <li><a class="dropdown-item" href="nuevamarca.php">Nueva marca</a></li>
+			 <!-- Se quitó nueva marca y se incluyó en proveedor -->
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="crear_paciente.php">Nuevo paciente</a></li>
               <li><hr class="dropdown-divider"></li>
