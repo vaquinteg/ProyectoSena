@@ -11,56 +11,74 @@
 
 <?php include 'menu.php'; ?>
 
-<div class="container-fluid row justify-content-lg-center">
+<div class="container-fluid row justify-content-center">
 <div class="col-lg-auto"> 
-  <h1>Subir formula oftálmica</h1>
+  <h1>Nueva formula oftálmica</h1>
 </div>
 </div>
 
 <div class="container-fluid d-flex justify-content-center mt-5" >
-  <form action="#" method="post">
-      <div class="container-fluid row justify-content-center">     
-        <div class="col-lg-3">     
-           <label for="Nombre">Nombres y apellidos</label> 
-        </div>
-        <div class="col-lg-6">          
-         <input class="campo_texto_nom" type="text" name="Nombre" class="form-control" >
+  <form id="formFormula" action="../ProyectoSena/php/registrar_formula.php" method="post">
+
+    <div class="container-fluid row justify-content-center">     
+      <div class="col-lg-2">     
+        <label for="identificacion">Identificación</label> 
+      </div>
+      <div class="col-lg-3">          
+        <input class="CampoTexto" type="number" id="identificacion" name="identificacion" class="form-control" onblur="obtenerPacienteFormula()" >
+      </div>   
+      <div class="col-lg-2 text-end">     
+           <label for="nombre">Nombre</label> 
+      </div>
+      <div class="col-lg-5">          
+         <input readonly class="campo_texto_nom" type="text" name="nombre" id="nombre" class="form-control" >
       </div>
     </div>
-    <div class="container-fluid row mt-2">
-      <div class="col-lg-2"> <label for="tipo_documento">Tipo de documento</label></div>
-      <div class="col-lg-2">
-          <select class="classic" aria-label="tipo documento">
-              <option selected> Seleccione una opción</option>
-              <option value="1">CC</option>
-              <option value="2">CE</option>
-              <option value="3">TI</option>
-              <option value="4">RC</option>
-              <option value="5">Pasaporte</option>
-            </select>
+
+    <!-- Esto es otro row-->
+    <div class="container-fluid row justify-content-center mt-2">
+      
+      <div class="col-lg-1">     
+          <label for="fecha">Fecha</label> 
       </div>
-      <div class="col-lg-2"></div>
-    <div class="col-lg-2">     
-       <label for="numero_documento">Número de documento</label> 
-    </div>
-    <div class="col-lg-2">          
-     <input class="CampoTexto" type="number" name="numero_documento" class="form-control" >
-  </div>
+      <div class="col-lg-3">          
+          <input class="CampoTexto" type="date" id="fecha" name="fecha" class="form-control">
+      </div>   
+
+      <div class="col-lg-2 text-end">     
+          <label for="profesional">Profesional</label> 
+      </div>
+      <div class="col-lg-4">          
+          <input class="campo_texto_nom" type="text" id="profesional" name="profesional" class="form-control">
+      </div>   
+    
   </div>
 <div class="container-fluid row mt-2"> 
-  <div class="col-lg-2">     
-    <label for="formula_OI">Formula ojo izquierdo</label> 
- </div>
- <div class="col-lg-2">          
-  <input class="CampoTexto" type="text" name="formula_OI" class="form-control" >
+      <div class="col-lg-2">     
+        <label for="ojo_izquierdo">Formula ojo izquierdo</label> 
+    </div>
+    <div class="col-lg-1">          
+      <input class="CampoTexto" type="text" name="ojo_izquierdo" class="form-control" >
+    </div>
+    <div class="col-lg-2"></div>
+      <div class="col-lg-2 text-end">   
+        <label for="ojo_derecho">Fórmula ojo derecho</label> 
+      </div>
+      <div class="col-lg-2">          
+      <input class="CampoTexto" type="text" name="ojo_derecho" class="form-control" >
+    </div>
 </div>
-<div class="col-lg-2"></div>
-  <div class="col-lg-2">   
-     <label for="formula_OD">Fórmula ojo derecho</label> 
-  </div>
-  <div class="col-lg-2">          
-   <input class="CampoTexto" type="text" name="formula_OD" class="form-control" >
-</div>
+
+<div class="m-3 row">
+      <div class="col-lg-2 text-start">   
+          <label for="distancia_pupilar">Distancia Pupilar</label> 
+      </div>
+      <div class="col-lg-2">          
+          <input class="CampoTexto" type="text" name="distancia_pupilar" class="form-control" >
+      </div>
+      <div class="col-lg-8 text-start">   
+          <!-- espacio en blanco--> 
+      </div>
 </div>
       
 
@@ -72,6 +90,7 @@
 </div>
 
 
-
+<script src="js/completar_formula.js"></script>
+<script src="js/resp_validacion_formula.js"></script>
 </body>
 </html>

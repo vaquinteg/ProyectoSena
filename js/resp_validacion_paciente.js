@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (xhr.status === 200) {
                 try {
                     var respuesta = JSON.parse(xhr.responseText);
-                    if (respuesta.estado === "exito") {
+                    if (respuesta.estado === "Exito") {
                         alert("Éxito: " + respuesta.mensaje);
                     } else if (respuesta.estado === "error") {
                         alert("Error: " + respuesta.mensaje);
