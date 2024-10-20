@@ -1,42 +1,65 @@
 <?php
-// Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', '', 'proyectosena');
+$servername = "localhost";
+$username = "root";  // Cambia esto si tienes un usuario diferente
+$password = "";  // Cambia esto si tienes una contraseña diferente
+$dbname = "proyectosena";
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
 // Preparar consultas
 
-$stmt_personas = $conn->prepare("INSERT INTO persona (nombre_apellido, tipo_documento, identificacion, telefono, direccion) VALUES (?, ?, ?, ?, ?)");
-$stmt_pacientes = $conn->prepare("INSERT INTO paciente (edad, grupo_sanguineo, rh, id_persona_fk) VALUES (?, ?, ?, ?)");
+$stmt_pacientes = $conn->prepare("INSERT INTO paciente (edad, grupo_sanguineo, rh, usuario_id) VALUES (?, ?, ?, ?)");
+
 
 // Validar datos
-$nombre_apellido = $_POST['nombre_apellido'];
-$tipo_documento = $_POST['tipo_documento'];
-$identificacion = $_POST['numero_documento'];
+$identificacion = $_POST['identificacion'];
 $edad_paciente = $_POST['edad'];
 $rh = $_POST['rh'];
 $grupo_sanguineo = $_POST['grupo_sanguineo'];
-$telefono = $_POST['telefono'];
-$direccion = $_POST['direccion'];
 
-// Insertar datos en personas
-$stmt_personas->bind_param("ssiis", $nombre_apellido, $tipo_documento, $identificacion, $telefono, $direccion);
-if ($stmt_personas->execute()) {
-    $id_persona = $stmt_personas->insert_id;
-    // Insertar datos en pacientes
-    $stmt_pacientes->bind_param("issi", $edad_paciente, $grupo_sanguineo, $rh, $id_persona);
+
+//consultar id de usuario con identificación
+
+$sql = "SELECT idUsuario FROM usuario WHERE identificacion = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $identificacion);
+$stmt->execute();
+$result = $stmt->get_result(); 
+$row = $result->fetch_assoc();
+        
+if ($row) {
+    $id_usuario = $row['idUsuario'];
+    
+    // Insertar datos en la tabla paciente
+    $stmt_pacientes->bind_param("issi", $edad_paciente, $grupo_sanguineo, $rh, $id_usuario);
     if ($stmt_pacientes->execute()) {
-        echo "Datos insertados correctamente";
+        $respuesta = [
+            'estado' => 'Exito', 
+            'mensaje' => 'Paciente agregado con éxito'
+        ];
     } else {
-        echo "Error al insertar datos en pacientes: " . $stmt_pacientes->error;
+        $respuesta = [
+            'estado' => 'error',
+            'mensaje' => 'No pudo agregarse el paciente: ' . $stmt_pacientes->error
+        ];
     }
 } else {
-    echo "Error al insertar datos en personas: " . $stmt_personas->error;
+    $respuesta = [
+        'estado' => 'error',
+        'mensaje' => 'No se encontró un usuario con esa identificación'
+    ];
 }
 
-// Cerrar conexión
+header('Content-Type: application/json');
+echo json_encode($respuesta);
+
+// Cerrar conexiones
+$stmt->close();
 $conn->close();
 ?>

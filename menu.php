@@ -34,7 +34,7 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="crear_paciente.php">Nuevo paciente</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="Nuevoproveedor.php">Nuevo proveedor</a></li>
+              <li><a class="dropdown-item" href="Nuevoproveedor.php">Nueva marca</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="subir_formula.php">Nueva fórmula</a></li>
               <li><hr class="dropdown-divider"></li>
