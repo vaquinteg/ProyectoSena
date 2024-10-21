@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var formulario = document.getElementById("formulario_marca_proveedor");
+    var formulario = document.getElementById("formulario_montura_marca_posicion");
 
     formulario.addEventListener("submit", function(event) {
         event.preventDefault();  // Prevenir el envío normal del formulario
 
         // Crear la solicitud XMLHttpRequest
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost/ProyectoSena/ProyectoSena/php/registrar_proveedor_marca.php", true);
+        xhr.open("POST", "http://localhost/ProyectoSena/ProyectoSena/php/select_marca_montura_posicion.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
         // Capturar los valores del formulario
-        var nit = encodeURIComponent(document.getElementsByName("nit")[0].value);
-        var razon_social = encodeURIComponent(document.getElementsByName("razon_social")[0].value);
-        var direccion = encodeURIComponent(document.getElementsByName("direccion")[0].value);
-        var telefono = encodeURIComponent(document.getElementsByName("telefono")[0].value);
-        var correo = encodeURIComponent(document.getElementsByName("correo")[0].value);
         var marca = encodeURIComponent(document.getElementsByName("marca")[0].value);
+        var material = encodeURIComponent(document.getElementsByName("material")[0].value);
+        var color = encodeURIComponent(document.getElementsByName("color")[0].value);
+        var precio = encodeURIComponent(document.getElementsByName("precio")[0].value);
+        var referencia = encodeURIComponent(document.getElementsByName("referencia")[0].value);
+        var posicion = encodeURIComponent(document.getElementsByName("posicion")[0].value);
 
         // Preparar los datos para enviar
-        var data = "nit=" + nit + "&razon_social=" + razon_social + "&direccion=" + direccion + "&telefono=" + telefono + "&correo=" + correo + "&marca=" + marca;
+        var data = "marca=" + marca + "&material=" + material + "&color=" + color + "&precio=" + precio + "&referencia=" + referencia + "&posicion=" + posicion;
         xhr.send(data);
 
         // Procesar la respuesta del servidor

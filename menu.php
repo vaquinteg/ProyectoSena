@@ -10,14 +10,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Almacén</a>
             <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="registrodemonturas.php">Registrar montura</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="acomodar_montura.php">Ubicar montura</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">  
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Compras</a>
-            <ul class="dropdown-menu bg-body border-3" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="ordendecompra.php">Generar orden de compra</a></li>
+              
             </ul>
           </li>
           <li class="nav-item dropdown">  

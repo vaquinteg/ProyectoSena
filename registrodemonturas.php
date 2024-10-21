@@ -22,13 +22,13 @@
            <div class="row">
 
              <div class="col-md-6 d-flex justify-content-between">
-              <label for="marca">MARCA DE LA MONTURA:</label></div>
+              <label for="marca">Marca de la montura:</label></div>
 
              <div class="col-md-6 d-flex justify-content-between">
               <select class="classic" name="marca" >
               <option value="">Seleccione una marca</option>
               <?php
-              $conn = new mysqli('localhost', 'root', '', 'proyectosena', '3307');
+              $conn = new mysqli('localhost', 'root', '', 'proyectosena');
               if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
               }
@@ -45,33 +45,33 @@
            </div>
 
            <div class="row">
-            <div class="col-md-6 d-flex justify-content-between"> <label for="material">MATERIAL:</label></div>
+            <div class="col-md-6 d-flex justify-content-between"> <label for="material">Material:</label></div>
             <div class="col-md-6 d-flex justify-content-between"><input type="text" name="material" id="material" class="es3 primary2"></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6 d-flex justify-content-between"><label for="color">COLOR:</label></div>
+            <div class="col-md-6 d-flex justify-content-between"><label for="color">Color:</label></div>
             <div class="col-md-6 d-flex justify-content-between"><input type="text" name="color" id="color" class="es3 primary2"></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6 d-flex justify-content-between"><label for="precio"> PRECIO</label></div>
+            <div class="col-md-6 d-flex justify-content-between"><label for="precio"> Precio</label></div>
             <div class="col-md-6 d-flex justify-content-between"><input type="number" name="precio" id="precio" class="es3 primary2"></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6 d-flex justify-content-between"><label for="referencia"> REFERENCIA</label></div>
+            <div class="col-md-6 d-flex justify-content-between"><label for="referencia"> Referencia</label></div>
             <div class="col-md-6 d-flex justify-content-between"><input type="text" name="referencia" id="referencia" class="es3 primary2"></div>
           </div>
 
           
           <div class="row">
-            <div class="col-md-6 d-flex justify-content-between"><label for="posicion"> POSICIÓN</label></div>
+            <div class="col-md-6 d-flex justify-content-between"><label for="posicion"> Posición</label></div>
             <div class="col-md-6 d-flex justify-content-between">
               <select  class="classic" name="posicion" >
-                <option value="marca lente 1" >Selecione una posición</option>
+                <option value="" >Selecione una posición</option>
                 <?php
-              $conn = new mysqli('localhost', 'root', '', 'proyectosena', '3307');
+              $conn = new mysqli('localhost', 'root', '', 'proyectosena');
               if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
               }
@@ -88,7 +88,7 @@
           </div>
 
           <div class="row m-4">
-            <div style="text-align: center;"><button class="bt primary"> Guardar e imprimir </button></div>
+            <div style="text-align: center;"><button class="bt primary"> Guardar </button></div>
           </div>
           </form>
     </div>
@@ -108,6 +108,6 @@
 
  
 
-
+<script src="js/resp_registrar_montura.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 function obtenerProveedor() {
     const nit = document.getElementById('nit').value;
     if (nit) {
-        fetch(`http://localhost:83/ProyectoSena/ProyectoSena/php/obtener_proveedor.php?nit=${nit}`)
+        fetch(`http://localhost/ProyectoSena/ProyectoSena/php/obtener_proveedor.php?nit=${nit}`)
             .then(response => response.json())
             .then(data => {
                 if (data) {

@@ -1,24 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var formulario = document.getElementById("formulario_marca_proveedor");
+    var formulario = document.getElementById("formCotizacion");
 
     formulario.addEventListener("submit", function(event) {
         event.preventDefault();  // Prevenir el envío normal del formulario
 
         // Crear la solicitud XMLHttpRequest
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost/ProyectoSena/ProyectoSena/php/registrar_proveedor_marca.php", true);
+        xhr.open("POST", "http://localhost/ProyectoSena/ProyectoSena/php/registrar_cotizacion.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
         // Capturar los valores del formulario
-        var nit = encodeURIComponent(document.getElementsByName("nit")[0].value);
-        var razon_social = encodeURIComponent(document.getElementsByName("razon_social")[0].value);
-        var direccion = encodeURIComponent(document.getElementsByName("direccion")[0].value);
-        var telefono = encodeURIComponent(document.getElementsByName("telefono")[0].value);
-        var correo = encodeURIComponent(document.getElementsByName("correo")[0].value);
-        var marca = encodeURIComponent(document.getElementsByName("marca")[0].value);
+        var identificacion = encodeURIComponent(document.getElementsByName("identificacion")[0].value);
+        var montura = encodeURIComponent(document.getElementsByName("montura")[0].value);
+        var marca_lente = encodeURIComponent(document.getElementsByName("marca_lente")[0].value);
+        var tipo_lente = encodeURIComponent(document.getElementsByName("tipo_lente")[0].value);
+        var filtro_lente = encodeURIComponent(document.getElementsByName("filtro_lente")[0].value);
+        var descuento = encodeURIComponent(document.getElementsByName("descuento")[0].value);
+        var precio_total = encodeURIComponent(document.getElementsByName("precio_total")[0].value);
 
         // Preparar los datos para enviar
-        var data = "nit=" + nit + "&razon_social=" + razon_social + "&direccion=" + direccion + "&telefono=" + telefono + "&correo=" + correo + "&marca=" + marca;
+        var data = "identificacion=" + identificacion + "&montura=" + montura + "&marca_lente=" + marca_lente + "&tipo_lente=" + tipo_lente + "&filtro_lente=" + filtro_lente + "&descuento=" + descuento + "&precio_total=" + precio_total;
         xhr.send(data);
 
         // Procesar la respuesta del servidor

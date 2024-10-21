@@ -22,11 +22,19 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssisssis", $nombre, $tipo_documento, $identificacion, $rol, $email, $password, $telefono, $direccion);
 
 if ($stmt->execute()) {
-    echo "Usuario registrado exitosamente";
+    $respuesta = [
+        'estado' => 'exito',
+        'mensaje' => 'La información ha sido guardada con éxito'
+    ];
 } else {
-    echo "Error: " . $stmt->error;
+   
+    $respuesta = [
+        'estado' => 'error',
+        'mensaje' => 'No se no pudo enviar la información'
+    ];
 }
-
+header('Content-Type: application/json');
+echo json_encode($respuesta);
 $stmt->close();
         
 ?>

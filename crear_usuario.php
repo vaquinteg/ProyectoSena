@@ -24,7 +24,7 @@
       
           <div class="container-fluid row mt-5" >
             <div class="col-lg-6">
-              <form action="php/registrar_usuario.php" method="post">
+              <form id="formUsuario" action="php/registrar_usuario.php" method="post">
               <div class="row">
                 <div class="col-lg-4"> <label class="label" for="nombre">Nombres y apellidos</label> 
                 </div>
@@ -119,8 +119,8 @@
               </div>
             </form>
           
-           
-            
+          
+<script src="js/resp_validacion_usuario.js"></script>
 </body>
 
 </html>
