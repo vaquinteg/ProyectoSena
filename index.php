@@ -17,13 +17,13 @@
             
                <div class="col-md-6 d-flex justify-content-center p-5"><img src="imagen/Logo.png" alt="Logo" height=200px></div>
                 <div class="col-md-6 d-flex justify-content-center">
-                    <form id="loginForm" class="login" onsubmit="return false" >
+            <form action="php/validar_usuario.php" id="loginFor" class="login" method="post" onsubmit="return false" >
                 <h1>Ingresar</h1>
-                <input type="text" id="username" name="username" class="login-input" placeholder="Usuario" autofocus>
-                <input type="password" id="password" name="password" class="login-input" placeholder="contraseña">
+                <input type="number" id="identificacion" name="identificacion" class="login-input" placeholder="Identificación" autofocus>
+                <input type="password" id="password" name="password" class="login-input" placeholder="Contraseña">
                 <input  type="submit" value="Ingresar" class="login-submit">
                 <p class="login-help"><a href="home.php">¿Olvidó su password?</a></p>
-             </form>
+            </form>
             </div>
           </div>
 

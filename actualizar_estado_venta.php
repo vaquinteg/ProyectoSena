@@ -21,42 +21,41 @@
 <br>
 <div class="row">
 <div class="container-fluid col-6 mt-lg-5" > <!-- contenedor para el formulario-->
-    <form action="#" method="post">
-        <div class="m-3 row justify-content-center">
-          <div class="col-6"> <label for="nombre">Ingrese nombre del paciente</label></div>
-          <div class="col-6">           
-           <input class="CampoTexto" type="text" name="nombre" class="form-control">
-        </div>
-        </div>
-        <div class="m-3 row justify-content-center">
-          <div class="col-6"> <label for="vitrina">Elija tipo de documentor</label></div>  
-               <div class="col-6">
-                <select class="classic" aria-label="Default select example">
-                    <option selected> Seleccione una opción</option>
-                    <option value="1">CC</option>
-                    <option value="2">CE</option>
-                    <option value="3">TI</option>
-                    <option value="4">RC</option>
-                    <option value="5">Pasaporte</option>
-                                   
-                </select>
-               </div>
-        </div>
+    <form action="php/registrar_estado.php" id="formEstado" method="post">
+        
         <div class="m-3 row justify-content-center">
             <div class="col-6 mt-3"> <label for="identificacion">Ingrese número de documento</label></div>
             <div class="col-6">           
-             <input class="CampoTexto mt-3" type="number" name="identificacion" class="form-control">
+             <input class="CampoTexto mt-3" type="number" id="identificacion" name="identificacion" onblur="obtenerPacienteFormula()">
           </div>
+        </div>
+
+        <div class="m-3 row justify-content-center">
+          <div class="col-6"> <label for="nombre">Nombre del paciente</label></div>
+          <div class="col-6">           
+           <input class="campo_texto_nom" type="text" name="nombre" id="nombre">
           </div>
+        </div>
+       
         <div class="m-3 row justify-content-center mt-4">
             <div class="col-6"> <label for="fila_vitrina">Seleccione estado de gafas</label></div>            
             <div class="col-6">
-                <select class="classic" aria-label="Default select example">
-                    <option selected> Seleccione una opción</option>
-                    <option value="1">En espera</option>
-                    <option value="2">Listas para entrega</option>
-                   
-                  </select>
+            <select class="classic" name="id_estado" >
+              <option value="">Seleccione una estado</option>
+              <?php
+              $conn = new mysqli('localhost', 'root', '', 'proyectosena');
+              if ($conn->connect_error) {
+                  die("Connection failed: " . $conn->connect_error);
+              }
+
+              $result = $conn->query("SELECT id_estado, estado FROM estado_gafas");
+              
+              while ($row = $result->fetch_assoc()) {
+                  echo "<option value='{$row['id_estado']}'>{$row['estado']}</option>";
+              }
+              $conn->close();
+              ?>
+                </select>    
           </div>
         </div>
           <div class="m-3 row justify-content-center">
@@ -71,7 +70,7 @@
 </div>
 
 
-
-
+<script src="js/resp_validacion_estado.js" ></script>
+<script src="js/completar_formula.js" ></script>
 </body>
 </html>
