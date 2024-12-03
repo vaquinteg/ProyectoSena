@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
-    <title>Nuevo paciente</title>
+    <title>Nuevo usuario</title>
 </head>
 <body>
   
@@ -16,7 +16,7 @@
 
       <div class="container-fluid row justify-content-lg-center">
         <div class="col-lg-auto"> 
-          <h1>Crear usuario</h1>
+          <h1>Crear usuario o paciente</h1>
         </div>
       </div>
       
@@ -46,7 +46,7 @@
               <div class="row mt-1">
                 <div class="col-lg-4"> <label for="rol">Rol</label> </div>
                 <div class="col-auto">
-                    <select name="rol" class="classic" aria-label="rol">
+                    <select name="rol" class="classic" aria-label="rol" id="dinamic_option">
                         <option selected> Seleccione un rol</option>
                         <option value="paciente">Paciente</option>
                         <option value="administrador">Administrador</option>
@@ -64,8 +64,6 @@
                <input class="CampoTexto" type="number" name="telefono" class="form-control" >
                 </div>
               </div>
-
-                                 
             </div>
       
             <div class="col-lg-6 mb-2">
@@ -83,7 +81,6 @@
                     </select>
                 </div>
               </div>
-
               
               <div class="row mt-4">
                 <div class="col-lg-4"> <label for="password">Contraseña</label> </div>
@@ -109,10 +106,48 @@
                <input class="CampoTexto" type="email" name="email" class="form-control" >
                 </div>
               </div>
-
               
             </div>
           </div>
+
+          <!--container dinámico que se oculta-->
+          <div class="oculto" id="hidden_container">
+          <div  class="container-fluid row">
+            <!-- Formulario que depende de la selección paciente-->
+              <div class="row">
+                <div class="col-lg-2"> <label for="edad">Edad</label></div>
+                <div class="col-lg-2">
+                <input class="CampoTexto ms-1" type="number" name="edad">
+                </div>
+                <div class="col-2"> </div>
+                <div class="col-lg-2 ms-2"> <label for="RH">RH</label> </div>
+                <div class="col-2 ms-2">
+                    <select name="rh" class="classic" aria-label="rh">
+                        <option selected> Seleccione un RH</option>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                </div>
+              </div>
+              <div class="row mt-2">
+                
+              </div>
+              <div class="row mt-2">
+                <div class="col-lg-2"> <label for="grupo_sanguineo">Grupo sanguineo</label> </div>
+                <div class="col-2 ms-1">
+                    <select name="grupo_sanguineo" class="classic" aria-label="grupo_sanguineo">
+                        <option selected> Seleccione una opción</option>
+                        <option value="O">O</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>                      
+                    </select>
+                </div>
+              </div>
+          </div>
+          </div>
+          <!-- Se cierra el container dinámico-->
+
 
           <div class=" row justify-content-center">
                 <div class="col-sm-auto mb-4"> <button id="botonNaranja" type="submit">Guardar</button></div>
@@ -121,6 +156,8 @@
           
           
 <script src="js/resp_validacion_usuario.js"></script>
+<script src="js/form_dinamico.js"></script>
+
 </body>
 
 </html>
