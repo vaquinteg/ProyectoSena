@@ -121,6 +121,7 @@
           
           
 <script src="js/resp_validacion_usuario.js"></script>
+<script src="js/resp_cotizacion.js" ></script>
 </body>
 
 </html>

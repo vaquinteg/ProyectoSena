@@ -1,7 +1,14 @@
 <?php
 // Conexión a la base de datos
 
-include 'db.php';
+$servername = "localhost";
+$username = "root";  // Cambia esto si tienes un usuario diferente
+$password = "";  // Cambia esto si tienes una contraseña diferente
+$dbname = "proyectosena";
+$port= 3307;
+
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
 
 
 

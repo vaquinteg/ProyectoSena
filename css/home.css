@@ -56,7 +56,24 @@ margin-bottom: -123px;
 .primary2 {background-color: rgb(235, 175, 13); border: 1px solid #110e04;} 
 .primary2:hover {background: #cccc89; color: rgba(10, 10, 10);}
 
+.bt2{
+    font-family: cursive;
+font-size: 12px;
+font-weight: bold;
+border: none; 
+color: black; 
+padding: 5px 5px; 
+cursor: pointer; 
+border-radius: 25px; 
+margin-right: -85px; 
+margin-bottom: -123px;
+}
 
+.primary3 {background-color: rgb(211, 124, 43); border: 1px solid #110e04;} 
+.primary3:hover {background: #da680b; color: rgba(15, 15, 15, 0.342);}
+
+.primary4 {background-color: rgb(235, 175, 13); border: 1px solid #110e04;} 
+.primary4:hover {background: #cccc89; color: rgba(10, 10, 10);}
 
 label{
     color: rgb(18, 18, 19);
@@ -188,4 +205,51 @@ background-repeat: no-repeat;
     width: 454px;
     background:rgb(153, 175, 147);
     border-radius: 12px;
+}
+
+.lmm {
+    font-family: cursive;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color:rgb(12, 12, 11)
+}
+.ablink:link {
+   
+    color: rgb(10, 10, 10);
+    padding: 5px 5px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px; 
+}
+
+/*Designing link button when mouse cursor hovers over it*/
+.ablink:hover {
+    background-color: rgb(211, 124, 43);
+    color: rgb(10, 10, 10);
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px; 
+    border: 1px solid #110e04
+}
+
+.rem:link {
+    color:rgb(75, 71, 71);
+}
+
+/*visited link will appear blue*/
+.rem:visited {
+    color: rgb(15, 15, 15);
+}
+
+/*when mouse hovers over link it will appear orange*/
+.rem:hover {
+    color: rgb(10, 10, 10);
+}
+
+/*when the link is clicked, it will appear black*/
+.rem:active {
+    color: black;
 }

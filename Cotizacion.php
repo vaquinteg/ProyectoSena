@@ -14,9 +14,10 @@
 
 <div class="container-fluid row m-1">
   <h6 class="ntitulo" style="text-align: center;"> Cotización de lentes</h6>
+  
 
     <div  class="col-md-9">
-           
+   
             <!-- Formulario -->
  
             <form action="php/registrar_cotizacion.php" id="formCotizacion" method="post">
@@ -26,7 +27,7 @@
               <label for="identificacion" >Identificación:</label></div>
 
               <div class="col-md-4 justify-content-between">
-              <input type="text" name="identificacion" id="identificacion" class="es3 primary2">
+              <input type="text" name="identificacion" id="identificacion" class="es3 primary2" required>
               </div>
 
             </div>
@@ -37,7 +38,7 @@
               <label for="montura" >Referencia de montura:</label></div>
 
              <div class="col-md-4 justify-content-between">
-              <input type="text" name="montura" class="es3 primary2" id="montura" onblur="obtenerPrecioMontura()">
+              <input type="text" name="montura" class="es3 primary2" id="montura" onblur="obtenerPrecioMontura()" required>
              </div>
 
              <div class="col-md-4 d-flex justify-content-between">
@@ -52,7 +53,7 @@
             <select class="classic" id="marca_lente" name="marca_lente" onblur="obtenerPrecioMarcaLente()" >
               <option value="">Seleccione la marca</option>
               <?php
-                $conn = new mysqli('localhost', 'root', '', 'proyectosena');
+                $conn = new mysqli('localhost', 'root', '', 'proyectosena',3307);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
@@ -78,7 +79,7 @@
             <select class="classic" id="filtro_lente" name="filtro_lente" onblur="obtenerPrecioFiltroLente()" >
               <option value="">Seleccione el filtro</option>
               <?php
-                $conn = new mysqli('localhost', 'root', '', 'proyectosena');
+                $conn = new mysqli('localhost', 'root', '', 'proyectosena',3307);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
@@ -106,7 +107,7 @@
             <select class="classic" id="tipo_lente" name="tipo_lente" onblur="obtenerPrecioTipoLente()" >
               <option value="">Seleccione el tipo</option>
               <?php
-                $conn = new mysqli('localhost', 'root', '', 'proyectosena');
+                $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3307);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
@@ -131,6 +132,7 @@
             <div class="col-md-4 d-flex justify-content-between">
               <select  class="classic" name="descuento" id="descuento">
               <option value="">Descuento</option>
+              <option value="0">0%</option>
               <option value="10">10%</option>
               <option value="20">20%</option>
               <option value="30">30%</option>
@@ -158,18 +160,13 @@
     </div>
 
 
-    <div class="col-md-3"><img src="imagen/gafasopticanaan.jpg" class="imagCot" > </div>
+    <div class="col-md-3"> <h2 class= "lmm">
+      <a class = "ablink" href="listacotizacion.php">Cotizaciones</a> </h2>
+      <img src="imagen/gafasopticanaan.jpg" class="imagCot" > </div>
     
 </div>
 
-
 </div>
-
-
-
-
-
-
  <script src="js/completar_precio.js"></script>
  <script src="js/resp_cotizacion.js" ></script>
 </body>

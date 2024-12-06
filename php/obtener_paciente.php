@@ -5,7 +5,7 @@ $password = "";  // Cambia esto si tienes una contraseña diferente
 $dbname = "proyectosena";
 
 // Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname,3307);
 
 // Verificar conexión
 if ($conn->connect_error) {
