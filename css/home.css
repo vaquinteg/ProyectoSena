@@ -38,16 +38,11 @@ body {
 }
 
 .bt{
-    font-family: cursive;
-font-size: 21px;
-font-weight: bold;
-border: none; 
-color: black; 
-padding: 11px 15px; 
-cursor: pointer; 
-border-radius: 25px; 
-margin-right: -85px; 
-margin-bottom: -123px;
+    margin-top: 30px;
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: orangered;
 }
 
 .primary {background-color: rgb(211, 124, 43); border: 1px solid #110e04;} 
@@ -188,4 +183,12 @@ background-repeat: no-repeat;
     width: 454px;
     background:rgb(153, 175, 147);
     border-radius: 12px;
+}
+
+.botonNaranja {
+    margin-top: 30px;
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: orangered;
 }

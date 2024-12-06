@@ -13,7 +13,7 @@
 
 <div class="container-fluid row justify-content-center">
 <div class="col-lg-auto"> 
-  <h1>Nueva formula oftálmica</h1>
+  <h1>Nuevo examen</h1>
 </div>
 </div>
 
@@ -83,7 +83,8 @@
       
 
         <div class="m-3 row justify-content-center">
-          <div class="col-sm-auto"> <button id="botonNaranja" type="submit">Subir fórmula</button></div>
+          <div class="col-sm-auto"> <button id="botonNaranja" type="submit" onclick="window.location.href='http://localhost/ProyectoSena/ProyectoSena/listar_examen.php'">Subir fórmula</button></div>
+          <div class="col-sm-auto"> <button id="botonNaranja" onclick="window.location.href='http://localhost/ProyectoSena/ProyectoSena/listar_examen.php'">Buscar examen</button></div>
         </div>
   </div>
   </form>

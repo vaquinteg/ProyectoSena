@@ -88,7 +88,7 @@
           </div>
 
           <div class="row m-4">
-            <div style="text-align: center;"><button class="bt primary"> Guardar </button></div>
+            <div style="text-align: center;"><button id="botonNaranja" class="bt primary"> Guardar </button></div>
           </div>
           </form>
     </div>

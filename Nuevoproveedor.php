@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Crear nuevo proveedor</title>
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
   
 
@@ -60,7 +61,7 @@
           </div>
 
           <div class="row m-4">
-            <div style="text-align: center;"><button type="submit" class="bt primary"> Guardar </button></div>
+            <div style="text-align: center;"><button type="submit" id="botonNaranja"> Guardar </button></div>
           </div>
           </form>
     </div>

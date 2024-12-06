@@ -72,7 +72,6 @@
                 <div class="col-auto">
                     <select name="tipo_documento" class="classic" aria-label="tipo_documento">
                         <option value=""> Seleccione un tipo de documento</option>
-                        
                         <option value="CC">CC</option>
                         <option value="CE">CE</option>
                         <option value="TI">TI</option>
@@ -147,10 +146,9 @@
           </div>
           </div>
           <!-- Se cierra el container dinámico-->
-
-
           <div class=" row justify-content-center">
-                <div class="col-sm-auto mb-4"> <button id="botonNaranja" type="submit">Guardar</button></div>
+                <div class="col-lg-auto mb-4"> <button class="botonNaranja" id="botonNaranja" type="submit" onclick="window.location.href='http://localhost/ProyectoSena/ProyectoSena/listar_usuario.php'">Guardar</button></div>
+                <div class="col-lg-auto mb-4"> <button class="botonNaranja" onclick="window.location.href='http://localhost/ProyectoSena/ProyectoSena/listar_usuario.php'">Buscar</button></div>
               </div>
             </form>
           
