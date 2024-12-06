@@ -5,7 +5,7 @@ $servername = "localhost";
 $username = "root";  // Cambia esto si es necesario
 $password = "";  // Cambia esto si es necesario
 $dbname = "proyectosena";
-$port = 3307;
+$port = 3306;
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname, $port);

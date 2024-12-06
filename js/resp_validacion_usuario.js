@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Crear la solicitud XMLHttpRequest
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:83/ProyectoSena/ProyectoSena/php/registrar_usuario.php", true);
+        xhr.open("POST", "http://localhost/ProyectoSena/ProyectoSena/php/registrar_usuario.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
         // Capturar los valores del formulario

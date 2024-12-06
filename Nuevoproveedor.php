@@ -62,19 +62,16 @@
       <div class="row m-4">
         <div style="text-align: center;">
           <button type="submit" class="bt primary">Guardar</button>
+          
         </div>
       </div>
     </form>
-  </div>
-
-          <div class="row m-4">
-            <div style="text-align: center;"><button type="submit" id="botonNaranja"> Guardar </button></div>
-          </div>
+</div>
           </form>
   <div class="col-md-6 d-flex flex-column justify-content-between">
-    <h3 class="lmm"><a class="ablink" href="lista_proveedor_marca.php">Lista de Proveedores y Marcas</a></h3>
-    <h7>Puede consultar la lista de proveedores en "Lista de Proveedores y marcas", Si el proveedor está registrado y desea agregarle una marca pulse <a class="rem" href="AgregarMarcaProveedor.php">Agregar Marca</a></h7>
-    <div class="row">
+  <h7>Puede consultar la lista de proveedores en "Lista de Proveedores y marcas", Si el proveedor está registrado y desea agregarle una marca pulse <a class="rem" href="AgregarMarcaProveedor.php">Agregar Marca</a></h7>
+  <h3 class="lmm"><a class="ablink" href="lista_proveedor_marca.php">Lista de Proveedores y Marcas</a></h3>
+  <div class="row"></div>  
       <img src="https://images.pexels.com/photos/39716/pexels-photo-39716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="foto" width="586" height="432">
     </div>
   </div>

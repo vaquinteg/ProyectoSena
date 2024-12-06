@@ -32,7 +32,7 @@
               <select class="classic" name="marca" >
               <option value="">Seleccione una marca</option>
               <?php
-              $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3307);
+              $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3306);
               if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
               }
@@ -78,7 +78,7 @@
               <select  class="classic" name="posicion" >
                 <option value="" >Selecione una posición</option>
                 <?php
-              $conn = new mysqli('localhost', 'root', '', 'proyectosena', '3307');
+              $conn = new mysqli('localhost', 'root', '', 'proyectosena', '3306');
               if ($conn->connect_error) {
                   die("Connection failed: " . $conn->connect_error);
               }

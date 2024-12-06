@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Validar si la referencia ya existe
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:83/ProyectoSena/ProyectoSena/php/verificar_referencia.php", true);
+        xhr.open("POST", "http://localhost/ProyectoSena/ProyectoSena/php/verificar_referencia.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
         xhr.onload = function() {

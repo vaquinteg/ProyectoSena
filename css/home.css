@@ -52,7 +52,7 @@ body {
 .primary2:hover {background: #cccc89; color: rgba(10, 10, 10);}
 
 .bt2{
-    font-family: cursive;
+font-family: cursive;
 font-size: 12px;
 font-weight: bold;
 border: none; 

@@ -1,7 +1,7 @@
 
 <?php
 // Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', '', 'proyectosena', 3307);
+$conn = new mysqli('localhost', 'root', '', 'proyectosena', 3306);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }

@@ -4,7 +4,7 @@ $servername = "localhost";
 $username = "root";  // Cambia esto si es necesario
 $password = "";  // Cambia esto si es necesario
 $dbname = "proyectosena";
-$port = 3307;
+$port = 3306;
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
@@ -79,7 +79,7 @@ $conn->close();
       <select class="classic" name="marca" required>
         <option value="">Seleccione una marca</option>
         <?php
-        $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3307);
+        $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3306);
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
@@ -143,7 +143,7 @@ $conn->close();
       <select class="classic" name="posicion" required>
         <option value="">Seleccione una posición</option>
         <?php
-        $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3307);
+        $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3306);
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }

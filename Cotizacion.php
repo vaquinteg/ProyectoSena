@@ -53,7 +53,7 @@
             <select class="classic" id="marca_lente" name="marca_lente" onblur="obtenerPrecioMarcaLente()" >
               <option value="">Seleccione la marca</option>
               <?php
-                $conn = new mysqli('localhost', 'root', '', 'proyectosena',3307);
+                $conn = new mysqli('localhost', 'root', '', 'proyectosena',3306);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
@@ -79,7 +79,7 @@
             <select class="classic" id="filtro_lente" name="filtro_lente" onblur="obtenerPrecioFiltroLente()" >
               <option value="">Seleccione el filtro</option>
               <?php
-                $conn = new mysqli('localhost', 'root', '', 'proyectosena',3307);
+                $conn = new mysqli('localhost', 'root', '', 'proyectosena',3306);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
@@ -107,7 +107,7 @@
             <select class="classic" id="tipo_lente" name="tipo_lente" onblur="obtenerPrecioTipoLente()" >
               <option value="">Seleccione el tipo</option>
               <?php
-                $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3307);
+                $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3306);
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
