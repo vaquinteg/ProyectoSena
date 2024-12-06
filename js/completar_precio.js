@@ -1,7 +1,7 @@
 function obtenerPrecioMontura() {
     const referencia = document.getElementById('montura').value;
     if (referencia) {
-        fetch(`http://localhost/ProyectoSena/ProyectoSena/php/obtener_precio_montura.php?referencia=${referencia}`)
+        fetch(`http://localhost:83/ProyectoSena/ProyectoSena/php/obtener_precio_montura.php?referencia=${referencia}`)
             .then(response => response.json())
             .then(data => {
                 if (data) {
@@ -21,7 +21,7 @@ function obtenerPrecioMontura() {
 function obtenerPrecioMarcaLente() {
     const marca_lente = document.getElementById('marca_lente').value;
     if (marca_lente) {
-        fetch(`http://localhost/ProyectoSena/ProyectoSena/php/obtener_precio_marca_lente.php?marca_lente=${marca_lente}`)
+        fetch(`http://localhost:83/ProyectoSena/ProyectoSena/php/obtener_precio_marca_lente.php?marca_lente=${marca_lente}`)
             .then(response => response.json())
             .then(data => {
                 if (data) {
@@ -42,7 +42,7 @@ function obtenerPrecioMarcaLente() {
 function obtenerPrecioFiltroLente() {
     const filtro_lente = document.getElementById('filtro_lente').value;
     if (filtro_lente) {
-        fetch(`http://localhost/ProyectoSena/ProyectoSena/php/obtener_precio_filtro_lente.php?filtro_lente=${filtro_lente}`)
+        fetch(`http://localhost:83/ProyectoSena/ProyectoSena/php/obtener_precio_filtro_lente.php?filtro_lente=${filtro_lente}`)
             .then(response => response.json())
             .then(data => {
                 if (data) {
@@ -62,7 +62,7 @@ function obtenerPrecioFiltroLente() {
 function obtenerPrecioTipoLente() {
     const tipo_lente = document.getElementById('tipo_lente').value;
     if (tipo_lente) {
-        fetch(`http://localhost/ProyectoSena/ProyectoSena/php/obtener_precio_tipo_lente.php?tipo_lente=${tipo_lente}`)
+        fetch(`http://localhost:83/ProyectoSena/ProyectoSena/php/obtener_precio_tipo_lente.php?tipo_lente=${tipo_lente}`)
             .then(response => response.json())
             .then(data => {
                 if (data) {

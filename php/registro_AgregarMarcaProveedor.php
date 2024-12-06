@@ -1,11 +1,11 @@
 <?php
-// registrar_proveedor_marca.php
+// Conectar a la base de datos
 // Conectar a la base de datos
 $servername = "localhost";
 $username = "root";  // Cambia esto si es necesario
 $password = "";  // Cambia esto si es necesario
 $dbname = "proyectosena";
-$port = 3307;
+$port =3307;
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
@@ -24,31 +24,6 @@ $telefono = $_POST['telefono'] ?? '';
 $correo = $_POST['correo'] ?? '';
 $marca = $_POST['marca'] ?? '';
 
-// Validación del teléfono: debe tener entre 7 y 10 dígitos
-if (!preg_match('/^[0-9]{7,10}$/', $telefono)) {
-    echo json_encode(['estado' => 'error', 'mensaje' => 'El teléfono debe tener entre 7 y 10 dígitos.']);
-    exit();
-}
-
-// Verificar si la marca ya existe
-$sqlCheckMarca = "SELECT idMarca FROM marca WHERE marca = ?";
-$stmtCheckMarca = $conn->prepare($sqlCheckMarca);
-$stmtCheckMarca->bind_param("s", $marca);
-if (!$stmtCheckMarca->execute()) {
-    echo json_encode(['estado' => 'error', 'mensaje' => 'Error al verificar la marca: ' . $stmtCheckMarca->error]);
-    exit();
-}
-$resultMarca = $stmtCheckMarca->get_result();
-
-if ($resultMarca->num_rows > 0) {
-    // La marca ya existe
-    echo json_encode([
-        'estado' => 'error',
-        'mensaje' => 'La marca ya existe. No se puede registrar un nuevo proveedor con esta marca.'
-    ]);
-    exit();
-}
-
 // Verificar si el proveedor ya existe
 $sqlProveedor = "SELECT idPROVEEDOR FROM proveedor WHERE nit = ?";
 $stmt = $conn->prepare($sqlProveedor);
@@ -65,12 +40,13 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $proveedorId = $row['idPROVEEDOR'];
 
-    echo json_encode([
-        'estado' => 'error',
-        'mensaje' => 'El proveedor con el NIT ingresado ya existe.',
-        'proveedorId' => $proveedorId  // Enviar el ID del proveedor
-    ]);
-    exit();
+    $sqlUpdateProveedor = "UPDATE proveedor SET razon_social = ?, direccion = ?, telefono = ?, correo = ? WHERE idPROVEEDOR = ?";
+    $stmtInsert = $conn->prepare($sqlUpdateProveedor);
+    $stmtInsert->bind_param("ssisi", $razon_social, $direccion, $telefono, $correo, $proveedorId);
+    if (!$stmtInsert->execute()) {
+        echo json_encode(['estado' => 'error', 'mensaje' => 'Error al actualizar proveedor: ' . $stmtInsert->error]);
+        exit();
+    }
 } else {
     // El proveedor no existe, lo insertamos
     $sqlInsertProveedor = "INSERT INTO proveedor (nit, razon_social, direccion, telefono, correo) VALUES (?, ?, ?, ?, ?)";
@@ -83,26 +59,46 @@ if ($result->num_rows > 0) {
     $proveedorId = $stmtInsert->insert_id;  // Obtenemos el ID del nuevo proveedor
 }
 
-// Insertar la nueva marca si el proveedor y la marca son válidos
-$sqlInsertMarca = "INSERT INTO marca (marca, proveedor_id) VALUES (?, ?)";
-$stmtInsertMarca = $conn->prepare($sqlInsertMarca);
-$stmtInsertMarca->bind_param("si", $marca, $proveedorId);
-if (!$stmtInsertMarca->execute()) {
-    echo json_encode(['estado' => 'error', 'mensaje' => 'Error al insertar la marca: ' . $stmtInsertMarca->error]);
+// Verificar si la marca ya existe
+$sqlCheckMarca = "SELECT idMarca FROM marca WHERE marca = ?";
+$stmtCheckMarca = $conn->prepare($sqlCheckMarca);
+$stmtCheckMarca->bind_param("s", $marca);
+if (!$stmtCheckMarca->execute()) {
+    echo json_encode(['estado' => 'error', 'mensaje' => 'Error al verificar la marca: ' . $stmtCheckMarca->error]);
     exit();
 }
+$resultMarca = $stmtCheckMarca->get_result();
 
-// Respuesta de éxito y redirección
-echo json_encode([
-    'estado' => 'exito',
-    'mensaje' => 'La información ha sido guardada con éxito',
-    'redirect' => 'lista_proveedor_marca.php'
-]);
+if ($resultMarca->num_rows > 0) {
+    // La marca ya existe, devolver mensaje de error en JSON
+    $respuesta = [
+        'estado' => 'error',
+        'mensaje' => 'La marca ya existe'
+    ];
+} else {
+    // La marca no existe, insertarla
+    $sqlInsertMarca = "INSERT INTO marca (marca, proveedor_id) VALUES (?, ?)";
+    $stmtInsertMarca = $conn->prepare($sqlInsertMarca);
+    $stmtInsertMarca->bind_param("si", $marca, $proveedorId);
+    if (!$stmtInsertMarca->execute()) {
+        echo json_encode(['estado' => 'error', 'mensaje' => 'Error al insertar marca nueva: ' . $stmtInsertMarca->error]);
+        exit();
+    }
+
+    // Devolver mensaje de éxito en JSON
+    $respuesta = [
+        'estado' => 'exito',
+        'mensaje' => 'La información ha sido guardada con éxito',
+        'redirect' => 'lista_proveedor_marca.php'
+    ];
+}
+
+// Devolver la respuesta en formato JSON
+header('Content-Type: application/json');
+echo json_encode($respuesta);
 
 // Cerrar las conexiones
 $stmt->close();
 $stmtInsert->close();
 $stmtCheckMarca->close();
-$stmtInsertMarca->close();
 $conn->close();
-?>

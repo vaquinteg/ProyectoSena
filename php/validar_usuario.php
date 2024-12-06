@@ -5,7 +5,7 @@ $password = "";
 $dbname = "proyectosena";
 
 // Crear conexión con mysqli
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname,3307);
 
 // Verificar conexión
 if ($conn->connect_error) {

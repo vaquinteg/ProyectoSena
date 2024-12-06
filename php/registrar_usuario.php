@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 // Conexión a la base de datos
-include 'db.php';
+include '../php/db.php';
 
 try {
     // Validar datos

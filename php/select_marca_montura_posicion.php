@@ -4,10 +4,10 @@ $servername = "localhost";
 $username = "root";  // Cambia esto si es necesario
 $password = "";  // Cambia esto si es necesario
 $dbname = "proyectosena";
-//$port =3307;
+$port = 3307;
 
 // Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
 
 // Verificar conexión
 if ($conn->connect_error) {
@@ -23,22 +23,25 @@ $precio = $_POST['precio'] ?? '';
 $referencia = $_POST['referencia'] ?? '';
 $Posicion_idPosicion = $_POST['posicion'] ?? '';
 
+// Realizar la inserción en la base de datos
+$sql = "INSERT INTO montura (Marca_idMarca, color, material, precio, referencia, Posicion_idPosicion) 
+        VALUES ('$Marca_idMarca', '$color', '$material', '$precio', '$referencia', '$Posicion_idPosicion')";
 
-$sql = "INSERT INTO montura (Marca_idMarca , color, material, precio, referencia, Posicion_idPosicion) VALUES ('$Marca_idMarca', '$color', '$material', '$precio', '$referencia','$Posicion_idPosicion')";
 if ($conn->query($sql) === TRUE) {
-    
-    $respuesta = [
+    // Enviar una respuesta JSON con un mensaje de éxito y la URL de redirección
+    echo json_encode([
         'estado' => 'exito',
-        'mensaje' => 'La información ha sido guardada con éxito'
-    ];
+        'mensaje' => 'La información ha sido guardada con éxito, Si desea ver el listado de monturas, presione aceptar',
+        'redirect' => 'listamarcamontura.php' // Esta es la URL a la que redirigir después
+    ]);
 } else {
-
-    $respuesta = [
-        'estado' => 'Error',
+    // Enviar una respuesta de error si no se pudo guardar la información
+    echo json_encode([
+        'estado' => 'error',
         'mensaje' => 'La información no pudo ser enviada'
-    ];
+    ]);
 }
 
-    header('Content-Type: application/json');
-    echo json_encode($respuesta);
+// Cerrar la conexión
+$conn->close();
 ?>

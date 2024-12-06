@@ -4,22 +4,34 @@ document.addEventListener("DOMContentLoaded", function() {
     formulario.addEventListener("submit", function(event) {
         event.preventDefault();  // Prevenir el envío normal del formulario
 
+        // Capturar los valores del formulario
+        var identificacion = document.getElementsByName("identificacion")[0].value.trim();
+        var montura = document.getElementsByName("montura")[0].value.trim();
+        var marca_lente = document.getElementsByName("marca_lente")[0].value.trim();
+        var tipo_lente = document.getElementsByName("tipo_lente")[0].value.trim();
+        var filtro_lente = document.getElementsByName("filtro_lente")[0].value.trim();
+        var descuento = document.getElementsByName("descuento")[0].value.trim();
+        var precio_total = document.getElementsByName("precio_total")[0].value.trim();
+
+        // Validar que los campos no estén vacíos
+        if (!identificacion || !montura || !marca_lente || !tipo_lente || !filtro_lente || !precio_total) {
+            alert("Todos los campos son obligatorios. Por favor, complete todos los campos.");
+            return; // Detener la ejecución si falta algún campo
+        }
+
         // Crear la solicitud XMLHttpRequest
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost/ProyectoSena/ProyectoSena/php/registrar_cotizacion.php", true);
+        xhr.open("POST", "php/registrar_cotizacion.php", true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-        // Capturar los valores del formulario
-        var identificacion = encodeURIComponent(document.getElementsByName("identificacion")[0].value);
-        var montura = encodeURIComponent(document.getElementsByName("montura")[0].value);
-        var marca_lente = encodeURIComponent(document.getElementsByName("marca_lente")[0].value);
-        var tipo_lente = encodeURIComponent(document.getElementsByName("tipo_lente")[0].value);
-        var filtro_lente = encodeURIComponent(document.getElementsByName("filtro_lente")[0].value);
-        var descuento = encodeURIComponent(document.getElementsByName("descuento")[0].value);
-        var precio_total = encodeURIComponent(document.getElementsByName("precio_total")[0].value);
-
         // Preparar los datos para enviar
-        var data = "identificacion=" + identificacion + "&montura=" + montura + "&marca_lente=" + marca_lente + "&tipo_lente=" + tipo_lente + "&filtro_lente=" + filtro_lente + "&descuento=" + descuento + "&precio_total=" + precio_total;
+        var data = "identificacion=" + encodeURIComponent(identificacion) + 
+                   "&montura=" + encodeURIComponent(montura) + 
+                   "&marca_lente=" + encodeURIComponent(marca_lente) + 
+                   "&tipo_lente=" + encodeURIComponent(tipo_lente) + 
+                   "&filtro_lente=" + encodeURIComponent(filtro_lente) + 
+                   "&descuento=" + encodeURIComponent(descuento) + 
+                   "&precio_total=" + encodeURIComponent(precio_total);
         xhr.send(data);
 
         // Procesar la respuesta del servidor
@@ -29,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     var respuesta = JSON.parse(xhr.responseText);
                     if (respuesta.estado === "exito") {
                         alert("Éxito: " + respuesta.mensaje);
+                        window.location.href = respuesta.redirect;
                     } else if (respuesta.estado === "error") {
                         alert("Error: " + respuesta.mensaje);
                     }

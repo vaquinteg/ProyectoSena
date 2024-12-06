@@ -1,7 +1,7 @@
 function obtenerPaciente() {
     const identificacion = document.getElementById('identificacion').value;
     if (identificacion) {
-        fetch(`http://localhost/ProyectoSena/ProyectoSena/php/obtener_paciente.php?identificacion=${identificacion}`)
+        fetch(`http://localhost:83/ProyectoSena/ProyectoSena/php/obtener_paciente.php?identificacion=${identificacion}`)
             .then(response => response.json())
             .then(data => {
                 if (data) {
