@@ -41,6 +41,7 @@
                 </div>
               </div>
                   
+              <!-- Formulario que depende de la selección paciente-->
               <div class="row">
                 <div class="col-lg-4 pt-3"> <label for="edad">Edad</label></div>
                 <div class="col-auto pt-2">
