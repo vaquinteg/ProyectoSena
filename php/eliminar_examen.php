@@ -12,7 +12,7 @@ $response = array();
 // Verificar que se recibió el ID del examen
 if (isset($_GET['idExamen'])) {
     // Conexión a la base de datos
-    $conn = new mysqli('localhost', 'root', '', 'proyectosena');
+    $conn = new mysqli('localhost', 'root', '', 'proyectosena', 3306);
     
     // Verificar conexión
     if ($conn->connect_error) {

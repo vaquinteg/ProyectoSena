@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 // Conexión a la base de datos
-$conn = new mysqli('localhost', 'root', '', 'proyectosena');
+$conn = new mysqli('localhost', 'root', '', 'proyectosena', 3306);
 
 // Verificar conexión
 if ($conn->connect_error) {
